@@ -35,7 +35,7 @@ public class GitClone {
 	public ArrayList<String> addresses;
 
 	private void getURL() throws IOException {
-		int maxPage = startNumberOfPage+2;
+		int maxPage = startNumberOfPage+10;
 		addresses = new ArrayList<String>();
 		
 		while(maxPage != startNumberOfPage) {
@@ -83,7 +83,7 @@ public class GitClone {
 	private void printGitCloneAddress() {
 		
 		for(int i=0; i<addresses.size(); i++) {
-			System.out.println(addresses.get(i));
+			System.out.println("git clone "+addresses.get(i));
 //			String command = "'"+resultDirectory+"/git clone "+addresses.get(i)+"'";
 //			try {
 //				Process process = new ProcessBuilder(command).start();
